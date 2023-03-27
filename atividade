@@ -95,15 +95,41 @@ programa {
               escreva("Nº 01 - ", nome_cliente, " - Idade: ", idade, "\n")
 
               escreva("*************************************************\n")
-              Util.aguarde(5000) //Aguarda 05 segundos
+              Util.aguarde(5000) //Aguarda 03 segundos
               inicio()
           pare
-        }
+          
+   
+    caso"3":
+    {
+         limpa()
+         escreva("Saindo do itema em 5 segundos . . .")
+         Util.aguarde(1000)
+        
+         limpa()
+         escreva("Saindo do itema em 4 segundos . . .")
+         Util.aguarde(1000)
+ 
+         limpa()
+         escreva("Saindo do itema em 3 segundos . . .")
+         Util.aguarde(1000)
 
+         limpa()
+         escreva("Saindo do itema em 2 segundos . . .")
+         Util.aguarde(1000)
 
+         limpa()
+         escreva("Saindo do itema em 1 segundos . . .")
+         Util.aguarde(1000)
+
+         limpa()
+         escreva("Até a proxima!!! \n\n\n")
+    
+    
+
+         pare
+     
+       }
+      }
     }
-
-
-
   }
-}
