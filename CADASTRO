@@ -1,0 +1,159 @@
+programa {
+
+  inclua biblioteca Util --> U
+
+  funcao inicio() {
+    
+      ///Declaração de constante
+      const inteiro valor = 2
+
+      //Declaração de variáveis
+      inteiro numero1
+
+      escreva("Informe um valor:\n")
+      leia(numero1)
+
+      limpa()
+      escreva("o resultado é: ", numero1*valor)
+
+      //Parada de 02 segundos para ver o resultado
+      U.aguarde(2000)
+
+
+      //Segunda rodada
+      limpa()
+      escreva("Informe novamente um valor:\n")
+      leia(numero1)
+
+      limpa()
+      escreva("O resultado é:\n", numero1*valor)
+
+
+
+
+
+  }
+}
+
+
+
+_____________________________________________________________________
+
+
+programa {
+
+  inclua biblioteca Util
+
+    inteiro opcao, idade[8], quant = 0, n
+    cadeia nome_completo[8]
+
+    funcao inicio() {
+
+    limpa()
+    escreva(".**********************************************************.\n")
+    escreva("|                  SISTEMA DE CADASTRO                     |\n")
+    escreva("'**********************************************************'\n")
+
+    escreva(" 1 - Cadastrar novo cliente\n")
+    escreva(" 2 - Vizualizar clientes cadastrados\n")
+    escreva(" 3 - Quem você deseja buscar?\n")
+    escreva(" 4 - Sair do sistema\n")
+
+    escreva("***********************************************************\n")
+    escreva("Opção desejada: ")
+    leia(opcao)
+
+    escolha(opcao)
+    {
+        caso 1:
+        {
+              limpa()
+              escreva("Informe o nome do cliente:\n")
+              leia(nome_completo[quant])
+
+              limpa()
+              escreva("Qual a idade de cliente ", nome_completo[quant], ":\n")
+              leia(idade[quant])
+
+              limpa()
+              //Exibe mensagem de usuario cadastrado com sucesso
+              escreva("AVISO: Usuário cadastrado com sucesso!")
+              Util.aguarde(3000)
+
+              quant++ //Incrementar a variavel quant 
+              
+              //Retorna para o menu inicio
+              inicio()
+              pare
+        }
+             
+        caso 2:
+        {
+          limpa()
+              limpa()
+              escreva(".************************************************.\n")
+              escreva("|                CLIENTES CADASTROS              |\n")
+              escreva("'************************************************'\n")
+
+              para(n = 0; n < quant; n++)
+              {
+                escreva("Nº: ", n+1, " - ", nome_completo[n], " - Idade: ", idade[n], "\n")
+              }
+
+              escreva("*************************************************\n")
+              Util.aguarde(5000) //Aguarda 05 segundos
+              inicio()
+              pare
+
+        }
+
+         caso 3:
+         {
+          escreva("Escreva o nome de quem você deseja buscar: \n")
+          leia(nome_completo)
+          limpa()
+
+          escreva(".************************************************.\n")
+          escreva("|              RESULTADO DE PESQUISA             |\n")
+          escreva
+          escreva("O ", nome_completo, " esta na posição", n)
+
+          pare
+         }
+
+         
+
+
+
+         caso 4:
+        {
+          limpa()
+          escreva("Saindo do sistema em 05 segundos...")
+          Util.aguarde(1000)    escreva("***********************************************************\n")
+          limpa()
+          escreva("Saindo do sistema em 03 segundos...")
+          Util.aguarde(1000)
+
+          limpa()
+          escreva("Saindo do sistema em 02 segundos...")
+          Util.aguarde(1000)
+
+          limpa()
+          escreva("Saindo do sistema em 01 segundos...")
+          Util.aguarde(1000)
+
+          limpa()
+          escreva("Até a próxima!!! \n\n\n")
+
+
+
+          pare
+      }
+
+
+    }
+
+
+
+  }
+}
