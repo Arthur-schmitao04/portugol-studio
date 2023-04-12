@@ -1,0 +1,9 @@
+programa {
+  funcao inicio() {
+    
+    escreva("Qual é a altura do muro")
+    leia(altura)
+    limpa()
+  
+  }
+}
